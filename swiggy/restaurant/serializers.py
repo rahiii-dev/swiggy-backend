@@ -138,15 +138,15 @@ class UserRestaurantViewSerializer(RestaurantProfileSerializer):
         user_lat = request.query_params.get('latitude')
         user_lng = request.query_params.get('longitude')
 
-        if user_lat and user_lng:
-            origin = {
-                'latitude': user_lat,
-                'longitude': user_lng
-            }
+        # if user_lat and user_lng:
+        #     origin = {
+        #         'latitude': user_lat,
+        #         'longitude': user_lng
+        #     }
 
-            ETA = getETA(origin=origin, dest=rep['location'])
+        #     ETA = getETA(origin=origin, dest=rep['location'])
 
-            rep['ETA'] = ETA
+        #     rep['ETA'] = ETA
 
         return rep
 
